@@ -51,9 +51,12 @@ $(document).ready(function() {
 
  <div class="header-welcome bg-inline header-news" style="background-image: url(images/upload/bg-news.jpg)">
 	<div class="title-news">
-		<h1 class="title">“LANG TOI” officially launches in Hanoi</h1>
+		<h1 class="title">
+      <!-- “LANG TOI” officially launches in Hanoi -->
+    </h1>
 	</div>
 </div>
+
 <section class="detail-news-box second-box">
 	<div class="single-post">
 		<div class="meta-news">
@@ -65,8 +68,14 @@ $(document).ready(function() {
 			</ul>
 		</div>
 		<div class="content-editor">
-			<div class="desc">After “growing up” in Ho Chi Minh City and “wandering” around Europe for so many years, “Lang Toi” – the first child of Lune Production has officially set foot in her second home – Hanoi.</div>
-			<p>Born in 2005, “<a href="#">Lang Toi</a>” which was created by a group of artists: Tuan Le, Nguyen Lan Maurice, Nhat Ly, Tan Loc, is a delicate merge of tradition and innovation. “Lang Toi” has successfully illustrated a peaceful image of Vietnamese village with completely new cirque approach using bamboos – the soul of the show and an orchestra of more than 20 types of traditional instruments. In other words, “Lang Toi” is bringing about a new vibrant, august yet ordinarily breath of Vietnamese theatre.</p>
+
+      <!--lead-->
+			<div class="desc">
+        After “growing up” in Ho Chi Minh City and “wandering” around Europe for so many years, “Lang Toi” – the first child of Lune Production has officially set foot in her second home – Hanoi.
+      </div>
+
+      <!--content-->
+      <!-- <p>Born in 2005, “<a href="#">Lang Toi</a>” which was created by a group of artists: Tuan Le, Nguyen Lan Maurice, Nhat Ly, Tan Loc, is a delicate merge of tradition and innovation. “Lang Toi” has successfully illustrated a peaceful image of Vietnamese village with completely new cirque approach using bamboos – the soul of the show and an orchestra of more than 20 types of traditional instruments. In other words, “Lang Toi” is bringing about a new vibrant, august yet ordinarily breath of Vietnamese theatre.</p>
 			<p>If you have ever watched “Lang Toi”, you will feel that moment when the hall quietly followed the breathtaking moves of actors before bursting into applause. This very warm welcome from our audience has nurtured “Lang Toi” with countless motivation and passion since the beginning. </p>
 			<p><img src="images/upload/bg-news.jpg" alt=""></p>
 			<p>Born in 2005, “Lang Toi” which was created by a group of artists: Tuan Le, Nguyen Lan Maurice, Nhat Ly, Tan Loc, is a delicate merge of tradition and innovation. “Lang Toi” has successfully illustrated a peaceful image of Vietnamese village with completely new cirque approach using bamboos – the soul of the show and an orchestra of more than 20 types of traditional instruments. In other words, “Lang Toi” is bringing about a new vibrant, august yet ordinarily breath of Vietnamese theatre.</p>
@@ -76,7 +85,8 @@ $(document).ready(function() {
 				<div>wow! Zone  <br/>1,470,000 VND </div>
 				<div>VIP Cabin Zone  <br/>4,000,000 VND </div>
 			</div>
-			<p>If you have ever watched “Lang Toi”, you will feel that moment when the hall quietly followed the breathtaking moves of actors before bursting into applause. This very warm welcome from our audience has nurtured “Lang Toi” with countless motivation and passion since the beginning. </p>
+			<p>If you have ever watched “Lang Toi”, you will feel that moment when the hall quietly followed the breathtaking moves of actors before bursting into applause. This very warm welcome from our audience has nurtured “Lang Toi” with countless motivation and passion since the beginning. </p> -->
+
 		</div>
 
 		<div class="relate-block" style="display: none;">

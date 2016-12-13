@@ -45,6 +45,10 @@ $(function() {
 
 
 jQuery(document).ready(function($) {
+    History.Adapter.bind(window, 'statechange', function() {
+        var State = History.getState();
+    });
+
     //Convert img svg to svg code
     jQuery('img.svg').each(function() {
         var $img = jQuery(this);
@@ -112,8 +116,6 @@ jQuery(document).ready(function($) {
         }, 'slow');
         return false;
     });
-
-
 
     //show fading words
     $('.fade-box').waypoint(function() {
@@ -301,8 +303,6 @@ jQuery(document).ready(function($) {
     //         }
     //     }
     // });
-
-
     //set equal heigh for mission block
     $('.mission-block .box').each(function(i) {
         var boxWidth = $(this).width();
@@ -337,7 +337,6 @@ jQuery(document).ready(function($) {
         });
     };
 
-
     // Milestones
     $().timelinr({
         arrowKeys: 'true',
@@ -357,7 +356,6 @@ jQuery(document).ready(function($) {
             },
         });
     });
-
 
     //counting effect
     var waypoint= new $('.whowork-box').waypoint({
@@ -398,14 +396,6 @@ jQuery(document).ready(function($) {
         $('.address-box').css('background-image', 'url(base/images/maps/catlai.jpg)');
     })
 
-
-
-    History.Adapter.bind(window, 'statechange', function() {
-        var State = History.getState();
-    });
-
-
-
     $('.ajax-popup').each(function(index) {
         clickItem($(this));
     });
@@ -426,11 +416,11 @@ jQuery(document).ready(function($) {
         } else return false;
     });
 
-    $("#content_detail .close-btn").click(function() {
-        $("#content_detail .content").html('');
-    });
+    // $("#content_detail .close-btn").click(function() {
+    //     $("#content_detail .content").html('');
+    // });
 
-    loadNews();
+    getNewsList();
     check_slug();
 
 });
@@ -468,7 +458,7 @@ $(window).load(function() {
     // };
 });
 
-function loadNews(){
+function getNewsList(){
   $.getJSON( "js/news.json", function( data ) {
       var items_arr = [];
       $.each( data, function( key, val ) {
@@ -481,13 +471,13 @@ function loadNews(){
         }
 
         items_arr.push("<div class='grid-item " + item_style + "'> \
-                          <a data-id='120' data-slug='ajax-news.html'> \
+                          <a data-id='"+data[key]['id']+"' data-slug='ajax-news.html'> \
                               <img src="+data[key]['thumb']+" alt=''> \
                                 <h3>"+data[key]['title']+"</h3> \
                           </a> \
                         </div>");
       });
-      console.log(items_arr);
+      //console.log(items_arr);
       $('#box-news').append(items_arr);
       $('.box-news .grid-item').each(function(index) {
           clickItem($(this));
@@ -572,17 +562,14 @@ function showPDetail(el, itemWidth, itemHeight) {
     var modal = $('#content_detail');
     var cbtn = $('#content_detail .close-btn');
     var content = $('#content_detail .content');
+
     var offset = el.offset();
     var sTop = $(window).scrollTop();
     var id = el.attr('data-id');
     var slug = el.attr('data-slug');
-
     // javascript: History.pushState({
     //     slug: slug
     // }, "Square", slug);
-
-
-
     if (modal.attr('loading') === 'false') {
         modal.attr('loading', true);
         content.html();
@@ -592,105 +579,128 @@ function showPDetail(el, itemWidth, itemHeight) {
             'id': id,
             'type': 'id'
         };
-        $.ajax({
-            url: slug,
-            type: "GET",
-            data: dataObj,
-            dataType: "html",
-            success: function(re, status, jsXHR) {
-                new Clipboard('[data-clipboard-text]');
-                modal.attr('loading', false);
-                if (re.length > 0) {
-                    el.parent().removeClass('loading');
-                    modal.css({
-                        width: itemWidth + 10 + "px",
-                        height: itemHeight + 4 + "px",
-                        top: offset.top - sTop + "px",
-                        left: offset.left + "px"
+
+        //LOAD data-json
+        $.getJSON( "js/news.json", function(data) {
+            modal.attr('loading', false);
+            var items_arr = [];
+            console.log(data[id]['title']);
+            //content.find('[data-json="background-image"]').css('background-image', item.background);
+            content.find('[data-json="news-bg"]').html(data[id]['large']);
+            content.find('[data-json="news-title"]').html(data[id]['title']);
+            content.find('[data-json="news-lead"]').html(data[id]['lead']);
+            content.find('[data-json="news-date"]').html(data[id]['date']);
+            content.find('[data-json="news-content"]').html(data[id]['content']);
+
+
+            //everything here
+            el.parent().removeClass('loading');
+            modal.css({
+                width: itemWidth + 10 + "px",
+                height: itemHeight + 4 + "px",
+                top: offset.top - sTop + "px",
+                left: offset.left + "px"
+            });
+            modal.find('.header-news').height($(window).height());
+            modal.fadeIn(100);
+            //content.html(re);
+
+
+
+
+            modal.addClass('open');
+            setTimeout(function() {
+                $('body').addClass('ovf-hidden');
+                content.delay(600).fadeIn(200);
+                cbtn.fadeIn(600);
+            }, 100);
+            detail_animation();
+            //$('.slide-other').slick('unslick');
+
+            // if ($('.slide-other').length) {
+            //     var item_length = $('.slide-other > div').length - 1;
+            //     var slider = $('.slide-other').slick({
+            //         autoplay: true,
+            //         // infinite: true,
+            //         autoplay: true,
+            //
+            //         dots: false,
+            //         infinite: false,
+            //         slidesToShow: 3,
+            //         slidesToScroll: 1,
+            //         responsive: [{
+            //                     breakpoint: 700,
+            //                     settings: {
+            //                         slidesToShow: 2,
+            //                         slidesToScroll: 2
+            //                     }
+            //                 }, {
+            //                     breakpoint: 480,
+            //                     settings: {
+            //                         slidesToShow: 1,
+            //                         slidesToScroll: 1
+            //                     }
+            //                 }
+            //                 // You can unslick at a given breakpoint now by adding:
+            //                 // settings: "unslick"
+            //                 // instead of a settings object
+            //             ]
+            //             // speed: 100,
+            //             // autoplaySpeed: 1000
+            //     });
+            //     setTimeout(function() {
+            //         $('.relate-block').show();
+            //     }, 1000);
+            // }
+
+            if ($('#timeline').length) {
+                setTimeout(function() {
+                    $().timelinr({
+                        arrowKeys: 'true',
+                        containerDiv: '#timeline',
+                        startAt: 4,
+                        orientation: ($(window).width() > 800) ? 'horizontal' : 'vertical'
+                    })
+
+                    $('.mission-block .box').each(function(i) {
+                        var boxWidth = $(this).width();
+                        // alert($this);
+                        $(this).css('height', boxWidth);
+                        // return false;
                     });
-                    modal.find('.header-news').height($(window).height());
-                    modal.fadeIn(100);
-                    content.html(re);
-                    modal.addClass('open');
-                    setTimeout(function() {
-                        $('body').addClass('ovf-hidden');
-                        content.delay(600).fadeIn(200);
-                        cbtn.fadeIn(600);
-                    }, 100);
-                    detail_animation();
-                    //$('.slide-other').slick('unslick');
-
-                    if ($('.slide-other').length) {
-                        var item_length = $('.slide-other > div').length - 1;
-                        var slider = $('.slide-other').slick({
-                            autoplay: true,
-                            // infinite: true,
-                            autoplay: true,
-
-                            dots: false,
-                            infinite: false,
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            responsive: [{
-                                        breakpoint: 700,
-                                        settings: {
-                                            slidesToShow: 2,
-                                            slidesToScroll: 2
-                                        }
-                                    }, {
-                                        breakpoint: 480,
-                                        settings: {
-                                            slidesToShow: 1,
-                                            slidesToScroll: 1
-                                        }
-                                    }
-                                    // You can unslick at a given breakpoint now by adding:
-                                    // settings: "unslick"
-                                    // instead of a settings object
-                                ]
-                                // speed: 100,
-                                // autoplaySpeed: 1000
-                        });
-
-                        setTimeout(function() {
-                            $('.relate-block').show();
-                        }, 1000);
-                    }
-
-                    if ($('#timeline').length) {
-                        setTimeout(function() {
-                            $().timelinr({
-                                arrowKeys: 'true',
-                                containerDiv: '#timeline',
-                                startAt: 4,
-                                orientation: ($(window).width() > 800) ? 'horizontal' : 'vertical'
-                            })
-
-                            $('.mission-block .box').each(function(i) {
-                                var boxWidth = $(this).width();
-                                // alert($this);
-                                $(this).css('height', boxWidth);
-                                // return false;
-                            });
-                        }, 800);
-                    }
-
-
-                    $('.count2').delay(3000).each(function() {
-                        $(this).prop('Counter', 0).animate({
-                            Counter: $(this).text()
-                        }, {
-                            duration: 4000,
-                            easing: 'swing',
-                            step: function(now) {
-                                $(this).text(Math.ceil(now) + "+");
-                            }
-                        });
-                    });
-                }
-
+                }, 800);
             }
+
+
+            $('.count2').delay(3000).each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now) + "+");
+                    }
+                });
+            });
+
         });
+
+
+        // $.ajax({
+        //     url: slug,
+        //     type: "GET",
+        //     data: dataObj,
+        //     dataType: "html",
+        //     success: function(re, status, jsXHR) {
+        //         // new Clipboard('[data-clipboard-text]');
+        //         modal.attr('loading', false);
+        //         if (re.length > 0) {
+        //
+        //         }
+        //
+        //     }
+        // });
     }
 };
 
