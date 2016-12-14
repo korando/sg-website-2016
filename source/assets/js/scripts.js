@@ -2,63 +2,63 @@ var $ = jQuery.noConflict();
 var ssClick = true;
 
 $(function() {
+    'use strict';
     // Check mobile
     var isMobile = false;
-    if ((/Mobile|Android|webOS|iP(hone|ad|od)|BlackBerry|IEMobile|Opera M(ob|in)i|Windows Phone/i.test(navigator.userAgent)))
+    if ((/Mobile|Android|webOS|iP(hone|ad|od)|BlackBerry|IEMobile|Opera M(ob|in)i|Windows Phone/i.test(navigator.userAgent))) {
         isMobile = true;
-
+    }
     if (!isMobile) {
         $('.menu-inner-wrapper').enscroll();
     }
 
     //simulate viewport for lanscape phone and Portrait ipad
-    var is_iPad = navigator.userAgent.match(/iPad/i) != null;
+    var isiPad = navigator.userAgent.match(/iPad/i) !== null;
+    var viewport;
     if (Math.abs(window.orientation) === 90) {
         //if in Landscape phone
-        var viewport = $('meta[name="viewport"]');
+        viewport = $('meta[name="viewport"]');
         if (screen.width <= 560) {
-            viewport.attr("content", "width=560, initial-scale=0.5");
+            viewport.attr('content', 'width=560, initial-scale=0.5');
         } else {
-            viewport.attr("content", "width=device-width, initial-scale=1");
+            viewport.attr('content', 'width=device-width, initial-scale=1');
         }
     } else {
-    	// if Portrait and is iPad
-      if (is_iPad==true) {
-        var viewport = $('meta[name="viewport"]');
-        viewport.attr("content", "width=1024");
-        $('.header-welcome-home').css('min-height', '65vh');
-        $('.intro').css('height', '65vh');
-        $('.fit-height').css('height', '65vh');
-        $('.scrolldown').hide();
-
-
-      }
+        // if Portrait and is iPad
+        if (isiPad === true) {
+            viewport = $('meta[name="viewport"]');
+            viewport.attr('content', 'width=1024');
+            $('.header-welcome-home').css('min-height', '65vh');
+            $('.intro').css('height', '65vh');
+            $('.fit-height').css('height', '65vh');
+            $('.scrolldown').hide();
+        }
     }
 
     //reload page when orientation change
-    window.onorientationchange = function()
-    {
-       window.location.reload();
-    }
+    window.onorientationchange = function() {
+        window.location.reload();
+    };
 
 });
 
 
-jQuery(document).ready(function($) {
-    History.Adapter.bind(window, 'statechange', function() {
-        var State = History.getState();
-    });
+$(document).ready(function($) {
+    'use strict';
+    // History.Adapter.bind(window, 'statechange', function() {
+    //     var State = History.getState();
+    // });
 
     //Convert img svg to svg code
-    jQuery('img.svg').each(function() {
-        var $img = jQuery(this);
+    $('img.svg').each(function() {
+        var $img = $(this);
         var imgID = $img.attr('id');
         var imgClass = $img.attr('class');
         var imgURL = $img.attr('src');
 
-        jQuery.get(imgURL, function(data) {
+        $.get(imgURL, function(data) {
             // Get the SVG tag, ignore the rest
-            var $svg = jQuery(data).find('svg');
+            var $svg = $(data).find('svg');
 
             // Add replaced image's ID to the new SVG
             if (typeof imgID !== 'undefined') {
@@ -96,13 +96,6 @@ jQuery(document).ready(function($) {
         return false;
     });
 
-    // $('.outcompany').click(function() {
-    //     $('html, body').animate({
-    //         scrollTop: $('section.squares-box-wrap').offset().top
-    //     }, 'slow');
-    //     return false;
-    // });
-
     $('.nav-talks').click(function() {
         $('html, body').animate({
             scrollTop: $('section.lettalk-box').offset().top
@@ -133,10 +126,10 @@ jQuery(document).ready(function($) {
             }
         });
         $('.career-wrapper .box-content', this).height(highestBox);
-    };
+    }
 
     // Click open menu
-    $(".opem-main-menu").click(function(e) {
+    $('.opem-main-menu').click(function() {
         $('.header-welcome-home').toggleClass('menu-open');
         $('body').toggleClass('body-sticky');
     });
@@ -151,21 +144,18 @@ jQuery(document).ready(function($) {
             }
         });
         $('.menu-inner .col', this).height(highestBox);
-    };
+    }
 
     $('ul.tabs li').click(function() {
-        var tab_id = $(this).attr('data-tab');
-
+        var tabId = $(this).attr('data-tab');
         $('ul.tabs li').removeClass('current');
         $('.tab-content').removeClass('current');
-
         $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    })
+        $('#' + tabId).addClass('current');
+    });
 
     // Toggle Search form
-    $('.btn-more').on('click', function(e) {
-        //e.stopPropagation();
+    $('.btn-more').on('click', function() {
         $('.box-news').addClass('show-fade');
         $(this).parent().hide();
     });
@@ -174,18 +164,17 @@ jQuery(document).ready(function($) {
     $('.outcompany').click(function(e) {
         e.preventDefault();
         $(this).parent().next().toggleClass('active');
-    })
+    });
 
     // Click Join and back for CAREER OPPORTUNITIES block
-    $('.btn-join-career').on('click', function(e) {
+    $('.btn-join-career').on('click', function() {
         $('.career-wrapper').addClass('full-expand');
         // $(this).hide();
     });
 
     //btn back
-    $('.btn-back').on('click', function(e) {
+    $('.btn-back').on('click', function() {
         $('.career-wrapper').removeClass('full-expand');
-        // $(this).hide();
     });
 
     //Custom select box
@@ -283,7 +272,7 @@ jQuery(document).ready(function($) {
     // if ($(window).width() > 969) {
     if ($('.second-box').length) {
         stickyNav();
-        console.log('trigger stickyNav');
+        //console.log('trigger stickyNav');
     }
     //Toggle for footer address
     $('.address-box ul').hide();
@@ -304,7 +293,7 @@ jQuery(document).ready(function($) {
     //     }
     // });
     //set equal heigh for mission block
-    $('.mission-block .box').each(function(i) {
+    $('.mission-block .box').each(function() {
         var boxWidth = $(this).width();
         // alert($this);
         $(this).css('height', boxWidth);
@@ -335,7 +324,7 @@ jQuery(document).ready(function($) {
                 // instead of a settings object
             ]
         });
-    };
+    }
 
     // Milestones
     $().timelinr({
@@ -344,36 +333,36 @@ jQuery(document).ready(function($) {
         startAt: 4,
         autoplay: 'true',
         orientation: ($(window).width() > 800) ? 'horizontal' : 'vertical'
-    })
+    });
 
     //typing effect
     $(function() {
-        $(".welcome-text h2 span").typed({
-            strings: ["of ...", "of Client and Society."],
+        $('.welcome-text h2 span').typed({
+            strings: ['of ...', 'of Client and Society.'],
             typeSpeed: 50,
             callback: function() {
-                $(".typed-cursor").hide();
+                $('.typed-cursor').hide();
             },
         });
     });
 
     //counting effect
-    var waypoint= new $('.whowork-box').waypoint({
-      handler: function() {
-          $('.count').each(function() {
-              $(this).prop('Counter', 0).animate({
-                  Counter: $(this).text()
-              }, {
-                  duration: 4000,
-                  easing: 'swing',
-                  step: function(now) {
-                      $(this).text(Math.ceil(now) + "+");
-                  }
-              });
-          });
-          this.destroy()
-      },
-      offset: '50%'
+    var waypoint = new $('.whowork-box').waypoint({
+        handler: function() {
+            $('.count').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now) + '+');
+                    }
+                });
+            });
+            this.destroy();
+        },
+        offset: '50%'
     });
 
     //maps switch
@@ -385,18 +374,18 @@ jQuery(document).ready(function($) {
     });
     $('.dongkhoi').click(function functionName() {
         $('.address-box').css('background-image', 'url(base/images/maps/dongkhoi.jpg)');
-    })
+    });
     $('.truongquocdung').click(function functionName() {
         $('.address-box').css('background-image', 'url(base/images/maps/truongquocdung.jpg)');
-    })
+    });
     $('.nguyentieula').click(function functionName() {
         $('.address-box').css('background-image', 'url(base/images/maps/nguyentieula.jpg)');
-    })
+    });
     $('.catlai').click(function functionName() {
         $('.address-box').css('background-image', 'url(base/images/maps/catlai.jpg)');
-    })
+    });
 
-    $('.ajax-popup').each(function(index) {
+    $('.ajax-popup').each(function() {
         clickItem($(this));
     });
 
@@ -413,7 +402,9 @@ jQuery(document).ready(function($) {
                 $('#content_detail').removeAttr('style');
                 ssClick = true;
             }, 200);
-        } else return false;
+        } else {
+          return false;
+        }
     });
 
     // $("#content_detail .close-btn").click(function() {
@@ -421,12 +412,13 @@ jQuery(document).ready(function($) {
     // });
 
     getNewsList();
-    check_slug();
+    checkSlug();
 
 });
 
 $(window).load(function() {
-    $('.hideload').each(function(i) {
+    'use strict';
+    $('.hideload').each(function() {
         var imgHeight = $(this).height(),
             imgWidth = $(this).width();
 
@@ -458,42 +450,44 @@ $(window).load(function() {
     // };
 });
 
-function getNewsList(){
-  $.getJSON( "js/news.json", function( data ) {
-      var items_arr = [];
-      $.each( data, function( key, val ) {
-        var item_style =""
+function getNewsList() {
+    'use strict';
 
-        if (data[key]['index'] == 0) {
-            item_style = 'grid-item--width2';
-        } else if (data[key]['index'] >6){
-            item_style = 'fade-in item-' + data[key]['index'];
-        }
+    $.getJSON('json/news.json', function(data) {
+        var itemsArr = [];
+        $.each(data, function(key, val) {
+            var itemStyle = '';
+            if (data[key]['index'] == 0) {
+                itemStyle = 'grid-item--width2';
+            } else if (data[key]['index'] > 6) {
+                itemStyle = 'fade-in item-' + data[key]['index'];
+            }
 
-        items_arr.push("<div class='grid-item " + item_style + "'> \
-                          <a data-id='"+data[key]['id']+"' data-slug='ajax-news.html'> \
-                              <img src="+data[key]['thumb']+" alt=''> \
-                                <h3>"+data[key]['title']+"</h3> \
+            itemsArr.push("<div class='grid-item " + itemStyle + "'> \
+                          <a data-id='" + data[key]['id'] + "' data-slug='ajax-news.html'> \
+                              <img src=" + data[key]['thumb'] + " alt=''> \
+                                <h3>" + data[key]['title'] + "</h3> \
                           </a> \
                         </div>");
-      });
-      //console.log(items_arr);
-      $('#box-news').append(items_arr);
-      $('.box-news .grid-item').each(function(index) {
-          clickItem($(this));
-      });
+        });
 
-      $('#box-news').append('<div class="pager-wrap"><a class="btn btn-more">See more</a></div>');
+        $('#box-news').append(itemsArr);
+        $('.box-news .grid-item').each(function() {
+            clickItem($(this));
+        });
+
+        $('#box-news').append('<div class="pager-wrap"><a class="btn btn-more">See more</a></div>');
     });
 }
 
-function check_slug() {
-    url = window.location.pathname;
+function checkSlug() {
+    'use strict';
+    var url = window.location.pathname;
     var segments = url.split('/');
     var slug = segments[2];
     //console.log(slug);
     //console.log(segments);
-    if (slug != undefined && slug != '') {
+    if (slug !== undefined && slug !== '') {
         var modal = $('#content_detail');
         var cbtn = $('#content_detail .close-btn');
         var content = $('#content_detail .content');
@@ -505,15 +499,15 @@ function check_slug() {
             content.html();
 
             var dataObj = {
-                "action": "detail_works",
+                'action': 'detail_works',
                 'slug': slug,
                 'type': 'slug'
             };
             $.ajax({
-                url: "about.html",
-                type: "GET",
+                url: 'about.html',
+                type: 'GET',
                 data: dataObj,
-                dataType: "html",
+                dataType: 'html',
                 success: function(re, status, jsXHR) {
                     modal.attr('loading', false);
                     if (re.length > 0) {
@@ -544,6 +538,7 @@ function check_slug() {
 }
 
 function clickItem(liContent) {
+    'use strict';
     liContent.find('a').on('click', function() {
         $('.header-welcome-home').removeClass('menu-open');
         var itemWidth = $(this).width();
@@ -554,11 +549,14 @@ function clickItem(liContent) {
             setTimeout(function() {
                 ssClick = true;
             }, 400);
-        } else return false;
+        } else {
+          return false;
+        }
     });
-};
+}
 
 function showPDetail(el, itemWidth, itemHeight) {
+    'use strict';
     var modal = $('#content_detail');
     var cbtn = $('#content_detail .close-btn');
     var content = $('#content_detail .content');
@@ -570,141 +568,154 @@ function showPDetail(el, itemWidth, itemHeight) {
     // javascript: History.pushState({
     //     slug: slug
     // }, "Square", slug);
+
+
+
     if (modal.attr('loading') === 'false') {
         modal.attr('loading', true);
         content.html();
         el.parent().addClass('loading');
         var dataObj = {
-            "action": "detail_works",
+            'action': 'detail_works',
             'id': id,
             'type': 'id'
         };
 
-        //LOAD data-json
-        $.getJSON( "js/news.json", function(data) {
-            modal.attr('loading', false);
-            var items_arr = [];
-            console.log(data[id]['title']);
-            //content.find('[data-json="background-image"]').css('background-image', item.background);
-            content.find('[data-json="news-bg"]').html(data[id]['large']);
-            content.find('[data-json="news-title"]').html(data[id]['title']);
-            content.find('[data-json="news-lead"]').html(data[id]['lead']);
-            content.find('[data-json="news-date"]').html(data[id]['date']);
-            content.find('[data-json="news-content"]').html(data[id]['content']);
+        console.log(slug);
+        if (slug == 'ajax-about.html') {
+          //load about page
+          $.ajax({
+              url: slug,
+              type: "GET",
+              data: dataObj,
+              dataType: "html",
+              success: function(re, status, jsXHR) {
+                  new Clipboard('[data-clipboard-text]');
+                  modal.attr('loading', false);
+                  if (re.length > 0) {
+                      el.parent().removeClass('loading');
+                      modal.css({
+                          width: itemWidth + 10 + "px",
+                          height: itemHeight + 4 + "px",
+                          top: offset.top - sTop + "px",
+                          left: offset.left + "px"
+                      });
+                      modal.find('.header-news').height($(window).height());
+                      modal.fadeIn(100);
+                      content.html(re);
+                      modal.addClass('open');
+                      setTimeout(function() {
+                          $('body').addClass('ovf-hidden');
+                          content.delay(600).fadeIn(200);
+                          cbtn.fadeIn(600);
+                      }, 100);
+                      detail_animation();
+                      if ($('#timeline').length) {
+                          setTimeout(function() {
+                              $().timelinr({
+                                  arrowKeys: 'true',
+                                  containerDiv: '#timeline',
+                                  startAt: 4,
+                                  orientation: ($(window).width() > 800) ? 'horizontal' : 'vertical'
+                              })
 
+                              $('.mission-block .box').each(function(i) {
+                                  var boxWidth = $(this).width();
+                                  // alert($this);
+                                  $(this).css('height', boxWidth);
+                                  // return false;
+                              });
+                          }, 800);
+                      }
+                      $('.count2').delay(3000).each(function() {
+                          $(this).prop('Counter', 0).animate({
+                              Counter: $(this).text()
+                          }, {
+                              duration: 4000,
+                              easing: 'swing',
+                              step: function(now) {
+                                  $(this).text(Math.ceil(now) + "+");
+                              }
+                          });
+                      });
+                  }
 
-            //everything here
-            el.parent().removeClass('loading');
-            modal.css({
-                width: itemWidth + 10 + "px",
-                height: itemHeight + 4 + "px",
-                top: offset.top - sTop + "px",
-                left: offset.left + "px"
-            });
-            modal.find('.header-news').height($(window).height());
-            modal.fadeIn(100);
-            //content.html(re);
+              }
+          });
+        } else {
+          //load detail news
+          $.getJSON('json/news.json', function(data) {
+              modal.attr('loading', false);
+              id = id - 1;
+              content.find('[data-json="news-title"]').html(data[id]['title']);
+              content.find('[data-json="news-lead"]').html(data[id]['lead']);
+              content.find('[data-json="news-date"]').html(data[id]['date']);
+              content.find('[data-json="news-content"]').html(data[id]['content']);
+              content.find('[data-json="news-bg"]').css('background-image', 'url(' + data[id]['large'] + ')');
 
+              //everything here
+              el.parent().removeClass('loading');
+              modal.css({
+                  width: itemWidth + 10 + 'px',
+                  height: itemHeight + 4 + 'px',
+                  top: offset.top - sTop + 'px',
+                  left: offset.left + 'px'
+              });
+              modal.find('.header-news').height($(window).height());
+              modal.fadeIn(100);
+              //content.html(re);
 
+              modal.addClass('open');
+              setTimeout(function() {
+                  $('body').addClass('ovf-hidden');
+                  content.delay(600).fadeIn(200);
+                  cbtn.fadeIn(600);
+              }, 100);
+              detail_animation();
 
+              //other news
+              $('.slide-other').slick('unslick');
+              if ($('.slide-other').length) {
+                  var item_length = $('.slide-other > div').length - 1;
+                  var slider = $('.slide-other').slick({
+                      autoplay: true,
+                      dots: false,
+                      infinite: false,
+                      slidesToShow: 3,
+                      slidesToScroll: 1,
+                      responsive: [{
+                                  breakpoint: 700,
+                                  settings: {
+                                      slidesToShow: 2,
+                                      slidesToScroll: 2
+                                  }
+                              }, {
+                                  breakpoint: 480,
+                                  settings: {
+                                      slidesToShow: 1,
+                                      slidesToScroll: 1
+                                  }
+                              }
+                              // You can unslick at a given breakpoint now by adding:
+                              // settings: "unslick"
+                              // instead of a settings object
+                          ]
+                          // speed: 100,
+                          // autoplaySpeed: 1000
+                  });
+                  setTimeout(function() {
+                      $('.relate-block').show();
+                  }, 1000);
+              }
+          });
+        }
+        //LOAD data-json for news
 
-            modal.addClass('open');
-            setTimeout(function() {
-                $('body').addClass('ovf-hidden');
-                content.delay(600).fadeIn(200);
-                cbtn.fadeIn(600);
-            }, 100);
-            detail_animation();
-            //$('.slide-other').slick('unslick');
-
-            // if ($('.slide-other').length) {
-            //     var item_length = $('.slide-other > div').length - 1;
-            //     var slider = $('.slide-other').slick({
-            //         autoplay: true,
-            //         // infinite: true,
-            //         autoplay: true,
-            //
-            //         dots: false,
-            //         infinite: false,
-            //         slidesToShow: 3,
-            //         slidesToScroll: 1,
-            //         responsive: [{
-            //                     breakpoint: 700,
-            //                     settings: {
-            //                         slidesToShow: 2,
-            //                         slidesToScroll: 2
-            //                     }
-            //                 }, {
-            //                     breakpoint: 480,
-            //                     settings: {
-            //                         slidesToShow: 1,
-            //                         slidesToScroll: 1
-            //                     }
-            //                 }
-            //                 // You can unslick at a given breakpoint now by adding:
-            //                 // settings: "unslick"
-            //                 // instead of a settings object
-            //             ]
-            //             // speed: 100,
-            //             // autoplaySpeed: 1000
-            //     });
-            //     setTimeout(function() {
-            //         $('.relate-block').show();
-            //     }, 1000);
-            // }
-
-            if ($('#timeline').length) {
-                setTimeout(function() {
-                    $().timelinr({
-                        arrowKeys: 'true',
-                        containerDiv: '#timeline',
-                        startAt: 4,
-                        orientation: ($(window).width() > 800) ? 'horizontal' : 'vertical'
-                    })
-
-                    $('.mission-block .box').each(function(i) {
-                        var boxWidth = $(this).width();
-                        // alert($this);
-                        $(this).css('height', boxWidth);
-                        // return false;
-                    });
-                }, 800);
-            }
-
-
-            $('.count2').delay(3000).each(function() {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 4000,
-                    easing: 'swing',
-                    step: function(now) {
-                        $(this).text(Math.ceil(now) + "+");
-                    }
-                });
-            });
-
-        });
-
-
-        // $.ajax({
-        //     url: slug,
-        //     type: "GET",
-        //     data: dataObj,
-        //     dataType: "html",
-        //     success: function(re, status, jsXHR) {
-        //         // new Clipboard('[data-clipboard-text]');
-        //         modal.attr('loading', false);
-        //         if (re.length > 0) {
-        //
-        //         }
-        //
-        //     }
-        // });
     }
-};
+}
 
 function detail_animation() {
+    'use strict';
     $('#content_detail').scroll(function() {
         var bgHeight = $('#content_detail .header-news').height();
         var scrollTop = $(this).scrollTop();
@@ -715,4 +726,4 @@ function detail_animation() {
             $('#content_detail .overlay-header .content-header').css('opacity', alpha);
         }
     });
-};
+}

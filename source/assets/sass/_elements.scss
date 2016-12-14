@@ -1551,6 +1551,7 @@ svg.logo path {
 	// min-height: 640px;
 	position: relative;
 	z-index: 99;
+	background-color: #000000;
 	@include breakpoint(1100px) {
 		min-height: 400px;
 	}
@@ -1968,6 +1969,12 @@ svg.logo path {
 			font-size: rem(28);
 			line-height: rem(36);
 		}
+	}
+	.news-content img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 2rem;
 	}
 	img {
 		max-width: 100%;

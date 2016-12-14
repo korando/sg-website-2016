@@ -6,11 +6,6 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1">
     <title>Square Group</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-    <script type='text/javascript' src="js/jquery-2.2.4.min.js"></script>
-    <script type='text/javascript' src='js/jquery.history.js'></script>
-    <script type='text/javascript' src='js/clipboard.min.js'></script>
-    <script type='text/javascript' src='js/typed.min.js'></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <!--[if lte IE 9]>
@@ -586,88 +581,93 @@
     <div class="dialog">
         <a href="javascript:;" class="close-btn"></a>
         <div class="content">
-
-
-<!--template-->
-<div class="header-welcome bg-inline header-news" data-json="news-bg" style="background-image: url(images/upload/bg-news.jpg)">
- <div class="title-news">
-   <h1 class="title" data-json="news-title"></h1>
- </div>
-</div>
-
-<section class="detail-news-box second-box">
- <div class="single-post">
-   <div class="meta-news">
-     <ul>
-       <li>
-         <span data-json="news-date"></span><!-- 09/08/2016 -->
-       </li>
-       <li><a href="#"><i class="icon fb"></i>Chia sẻ</a></li>
-       <li><a href="#"><i class="icon mail"></i>Gửi email</a></li>
-       <li><a href="#"><i class="icon link"></i>Link</a></li>
-     </ul>
-   </div>
-   <div class="content-editor">
-
-     <!--lead-->
-     <div data-json="news-lead" class="news-lead">
-
-     </div>
-
-     <!--content-->
-     <div data-json="news-content" class="news-content">
-     
-      </div>
-   </div>
-
-   <div class="relate-block" style="display: none;">
-     <h3 class="title-block">Other news</h3>
-     <div class="box-news grid slide-other">
-       <div class="grid-item">
-         <img src="images/upload/thumb2.jpg" alt="">
-         <h3><a data-id="120" data-slug="news.html">Lang Toi - Performs live at Hanoi opera house </a></h3>
-       </div>
-       <div class="grid-item">
-         <img src="images/upload/thumb1.jpg" alt="">
-         <h3><a href="#">Skynet presented an automobile e-commerce platform</a></h3>
-       </div>
-       <div class="grid-item">
-         <img src="images/upload/thumb5.jpg" alt="">
-         <h3><a href="#">10 years of riding the wind</a></h3>
-       </div>
-       <div class="grid-item">
-         <img src="images/upload/thumb4.jpg" alt="">
-         <h3><a href="#">Skynet presented an automobile e-commerce platform</a></h3>
-       </div>
-       <div class="grid-item">
-         <img src="images/upload/thumb5.jpg" alt="">
-         <h3><a href="#">10 years of riding the wind</a></h3>
-       </div>
-       <div class="grid-item">
-         <img src="images/upload/thumb6.jpg" alt="">
-         <h3><a href="#">Square group - strategic partner for Vietnam Young Lions 2016</a></h3>
-       </div>
-     </div>
-   </div>
- </div>
-
-</section>
-
-<!--/template-->
-
+            <!--template-->
+            <div class="header-welcome bg-inline header-news" data-json="news-bg">
+                <div class="title-news">
+                    <h1 class="title" data-json="news-title"></h1>
+                </div>
+            </div>
+            <section class="detail-news-box second-box">
+                <div class="single-post">
+                    <div class="meta-news">
+                        <ul>
+                            <li><span data-json="news-date"></span></li>
+                            <li><a href="#"><i class="icon fb"></i>Chia sẻ</a></li>
+                            <li><a href="#"><i class="icon mail"></i>Gửi email</a></li>
+                            <li><a href="#"><i class="icon link"></i>Link</a></li>
+                        </ul>
+                    </div>
+                    <div class="content-editor">
+                        <!--lead-->
+                        <div data-json="news-lead" class="desc"></div>
+                        <!--content-->
+                        <div data-json="news-content" class="news-content"></div>
+                    </div>
+                    <div class="relate-block" style="display: none;">
+                        <h3 class="title-block">Other news</h3>
+                        <div class="box-news grid slide-other">
+                            <div class="grid-item">
+                                <img src="images/upload/thumb2.jpg" alt="">
+                                <h3><a data-id="120" data-slug="news.html">Lang Toi - Performs live at Hanoi opera
+                                    house </a></h3>
+                            </div>
+                            <div class="grid-item">
+                                <img src="images/upload/thumb1.jpg" alt="">
+                                <h3><a href="#">Skynet presented an automobile e-commerce platform</a></h3>
+                            </div>
+                            <div class="grid-item">
+                                <img src="images/upload/thumb5.jpg" alt="">
+                                <h3><a href="#">10 years of riding the wind</a></h3>
+                            </div>
+                            <div class="grid-item">
+                                <img src="images/upload/thumb4.jpg" alt="">
+                                <h3><a href="#">Skynet presented an automobile e-commerce platform</a></h3>
+                            </div>
+                            <div class="grid-item">
+                                <img src="images/upload/thumb5.jpg" alt="">
+                                <h3><a href="#">10 years of riding the wind</a></h3>
+                            </div>
+                            <div class="grid-item">
+                                <img src="images/upload/thumb6.jpg" alt="">
+                                <h3><a href="#">Square group - strategic partner for Vietnam Young Lions 2016</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/template-->
         </div>
     </div>
 </div>
 
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/jquery.timelinr-0.9.6.js"></script>
-<script src="js/enscroll.min.js"></script>
-<script src="js/scripts.js"></script>
-<!-- <script src="js/detail-view.js"></script> -->
-<script src="js/css3-animate-it.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
+<!-- <script>
+  var D2 = {
+      config: {
+          baseUrl: '/js',
+      }
+  };
 
+  D2.init = function ($) {
+      requirejs([
+       "js/main.js"
+      ], function () { });
+  }
+</script>
+<script src="js/require.js" data-main="js/main.js"></script> -->
+
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src='js/jquery.history.js'></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.timelinr-0.9.6.js"></script>
+<script src='js/clipboard.min.js'></script>
+<script src='js/typed.min.js'></script>
+<script src="js/slick.min.js"></script>
+<script src="js/enscroll.min.js"></script>
+<script src="js/css3-animate-it.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- <script type='text/javascript' src='js/all.js'></script> -->
 </body>
 
 

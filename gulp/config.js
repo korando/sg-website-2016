@@ -24,6 +24,11 @@ module.exports = {
     'dest': 'public/images'
   },
 
+  'json': {
+    'src' : 'source/assets/json/**/**/**/*',
+    'dest': 'public/json'
+  },
+
   'views': {
     'watch': 'source/views/**/*.html',
     'src'  : 'source/views/*.html'
