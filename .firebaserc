@@ -1,5 +1,24 @@
 {
-  "projects": {
-    "default": "squaregroup-9762e"
-  }
+    "projects": {
+        "default": "squaregroup-9762e"
+    },
+    "headers": [{
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [{
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+        }]
+    }, {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|css|js|eot|otf|ttf|ttc|woff)",
+        "headers": [{
+            "key": "Cache-Control",
+            "value": "max-age=7200"
+        }]
+    }, {
+        "source": "404.html",
+        "headers": [{
+            "key": "Cache-Control",
+            "value": "max-age=300"
+        }]
+    }]
 }

@@ -98,7 +98,6 @@ input:focus:-moz-placeholder, textarea:focus:-moz-placeholder{
     color: transparent!important;
 }
 
-
 .hidden{
      opacity:0;
 }
@@ -219,7 +218,7 @@ input:focus:-moz-placeholder, textarea:focus:-moz-placeholder{
 	position: absolute;
 	top: 40px;
 	left: 40px;
-	z-index: 9999;
+	z-index: 9998;
 	transition: all .15s ease-in;
    	-moz-transition: all .15s ease-in;
    	-webkit-transition: all .15s ease-in;

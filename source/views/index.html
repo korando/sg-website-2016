@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1">
     <title>Square Group</title>
@@ -13,277 +13,359 @@
     <![endif]-->
 
 </head>
+
 <body>
-<div class="header-welcome-home bg-inline">
+    <!--loading-->
+    <div class="loader">
+       <div class="loader-container">
+         <!-- <div class='loader--dot'></div>
+         <div class='loader--dot'></div>
+         <div class='loader--dot'></div>
+         <div class='loader--dot'></div>
+         <div class='loader--dot'></div>
+         <div class='loader--dot'></div>
+         <div class='loader--text'></div> -->
+         <svg id="svg-loading" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.39 34.02">
+         <g class="sgv-g1">
+           <path name="logo-v9" class="cls-1 v9" id="st1" d="M10.3,34a2.63,2.63,0,0,1-2.47-1.73L0.16,11.2A2.63,2.63,0,0,1,1.73,7.83L22.82,0.16a2.63,2.63,0,0,1,3.36,1.57l7.68,21.09a2.63,2.63,0,0,1-1.57,3.36L11.2,33.86a2.61,2.61,0,0,1-.89.16M23.71,0.3a2.29,2.29,0,0,0-.79.14L1.83,8.12a2.33,2.33,0,0,0-1.39,3L8.12,32.19a2.32,2.32,0,0,0,3,1.39L32.18,25.9a2.32,2.32,0,0,0,1.39-3L25.9,1.83A2.33,2.33,0,0,0,23.71.3"/>
+         	<path name="logo-v8" class="cls-1 v8" id="st2" d="M10.3,32.93a2.5,2.5,0,0,1-2.36-1.7L1.22,11.09A2.5,2.5,0,0,1,2.79,7.94L22.93,1.22a2.5,2.5,0,0,1,3.15,1.57L32.8,22.93a2.49,2.49,0,0,1-1.57,3.15L11.08,32.8a2.5,2.5,0,0,1-.79.13M23.72,1.39a2.18,2.18,0,0,0-.69.11L2.89,8.22A2.19,2.19,0,0,0,1.51,11L8.22,31.13A2.19,2.19,0,0,0,11,32.51l20.14-6.72,0,0.14,0-.14A2.19,2.19,0,0,0,32.51,23L25.79,2.89a2.2,2.2,0,0,0-2.08-1.49"/>
+         	<path name="logo-v7" class="cls-1 v7" id="st3" d="M10.3,31.84A2.37,2.37,0,0,1,8,30.16L2.28,11A2.37,2.37,0,0,1,3.86,8L23,2.28A2.36,2.36,0,0,1,26,3.86L31.74,23A2.37,2.37,0,0,1,30.16,26L11,31.74a2.41,2.41,0,0,1-.68.1M23.72,2.48a2,2,0,0,0-.59.09L3.94,8.33a2.06,2.06,0,0,0-1.38,2.56L8.33,30.07a2.06,2.06,0,0,0,2.56,1.38l19.19-5.76a2.06,2.06,0,0,0,1.38-2.56L25.69,3.95a2.06,2.06,0,0,0-2-1.46"/>
+         	<path name="logo-v6" class="cls-1 v6" id="st4" d="M10.29,30.75a2.24,2.24,0,0,1-2.15-1.66L3.34,10.86A2.23,2.23,0,0,1,4.93,8.14l18.23-4.8a2.23,2.23,0,0,1,2.72,1.59l4.8,18.23a2.24,2.24,0,0,1-1.59,2.72l-18.23,4.8a2.23,2.23,0,0,1-.57.07M23.72,3.57a1.9,1.9,0,0,0-.49.06L5,8.43a1.93,1.93,0,0,0-1.37,2.35L8.43,29a1.93,1.93,0,0,0,2.35,1.37L29,25.59a1.93,1.93,0,0,0,1.37-2.35L25.59,5a1.94,1.94,0,0,0-1.86-1.43"/>
+         	<path name="logo-v5" class="cls-1 v5" id="st5" d="M10.29,29.67A2.11,2.11,0,0,1,8.24,28L4.4,10.74A2.1,2.1,0,0,1,6,8.24L23.27,4.4A2.11,2.11,0,0,1,25.78,6l3.84,17.28A2.1,2.1,0,0,1,28,25.78L10.74,29.62a2.1,2.1,0,0,1-.46.05m13.44-25a1.79,1.79,0,0,0-.39,0L6.06,8.53a1.8,1.8,0,0,0-1.36,2.15L8.53,28a1.8,1.8,0,0,0,2.14,1.36L28,25.48a1.8,1.8,0,0,0,1.36-2.15L25.48,6.06a1.81,1.81,0,0,0-1.75-1.41"/>
+         	<path name="logo-v4" class="cls-1 v4" id="st7" d="M10.28,28.59A2,2,0,0,1,8.34,27L5.46,10.63a2,2,0,0,1,1.6-2.29L23.39,5.46a2,2,0,0,1,2.29,1.6l2.88,16.33A2,2,0,0,1,27,25.68L10.63,28.56l-0.34,0M23.73,5.73l-0.29,0L7.11,8.64a1.68,1.68,0,0,0-1.36,1.94L8.64,26.9a1.67,1.67,0,0,0,1.94,1.36L26.9,25.38a1.68,1.68,0,0,0,1.36-1.94L25.38,7.11a1.68,1.68,0,0,0-1.65-1.38"/>
+           <path name="logo-v3" class="cls-1 v3" id="st6" d="M10.28,27.51a1.86,1.86,0,0,1-1.84-1.63L6.52,10.51A1.86,1.86,0,0,1,8.13,8.44L23.51,6.52a1.86,1.86,0,0,1,2.07,1.61L27.5,23.51a1.86,1.86,0,0,1-1.61,2.07L10.51,27.5H10.28M23.74,6.81H23.54L8.17,8.74a1.56,1.56,0,0,0-1.35,1.73L8.74,25.85a1.56,1.56,0,0,0,1.73,1.35l15.37-1.92a1.56,1.56,0,0,0,1.35-1.74L25.28,8.17a1.56,1.56,0,0,0-1.54-1.36"/>
+           <path name="logo-v2" class="cls-1 v2" id="st8" d="M10.28,26.44a1.75,1.75,0,0,1-1.74-1.63l-1-14.42A1.75,1.75,0,0,1,9.2,8.54l14.42-1A1.75,1.75,0,0,1,25.48,9.2l1,14.42a1.75,1.75,0,0,1-1.62,1.86l-14.42,1H10.28M23.74,7.88h-0.1l-14.42,1a1.44,1.44,0,0,0-1.34,1.53l1,14.42a1.44,1.44,0,0,0,1.53,1.34l14.42-1a1.44,1.44,0,0,0,1.34-1.53l-1-14.42a1.45,1.45,0,0,0-1.44-1.34"/>
+         	<path name="logo-v1" class="cls-1 v1" id="st9" d="M23.74,25.38H10.27a1.64,1.64,0,0,1-1.64-1.64V10.27a1.64,1.64,0,0,1,1.64-1.64H23.74a1.64,1.64,0,0,1,1.64,1.64V23.74a1.64,1.64,0,0,1-1.64,1.63M10.27,8.94a1.33,1.33,0,0,0-1.33,1.33V23.74a1.33,1.33,0,0,0,1.33,1.33H23.74a1.33,1.33,0,0,0,1.33-1.33V10.27a1.33,1.33,0,0,0-1.33-1.33H10.27Z"/>
+         </g>
+         <g class="sgv-g2">
+           <path name="logo-s" class="cls-2 logo-s" id="st10" d="M36.4,20.26V19.11H45a1.47,1.47,0,0,0,1.07-.37,1.43,1.43,0,0,0,.37-1.06v-1.6a1.37,1.37,0,0,0-.35-1A1.47,1.47,0,0,0,45,14.69H38.55a2,2,0,0,1-2.27-2.3V11.21a2,2,0,0,1,2.27-2.27h8.94v1.15h-8.7a1.22,1.22,0,0,0-1.38,1.33V12.2a1.23,1.23,0,0,0,1.35,1.39h6.55c1.56,0,2.28.66,2.28,2.09V18a2,2,0,0,1-2.28,2.28H36.4Z"/>
+         	<path name="logo-q" class="cls-2 logo-q" id="st11" d="M59,8.95H52.2a2,2,0,0,0-2.27,2.27V18a2,2,0,0,0,2.27,2.27h2.44l-0.56-1.15H52.5a1.27,1.27,0,0,1-1.42-1.41v-6.2a1.29,1.29,0,0,1,1.43-1.42h6.18a1.27,1.27,0,0,1,1.41,1.4v6.3A1.13,1.13,0,0,1,59,19.11H56.72l-1.13-2.3H54.28L56,20.27h3A2,2,0,0,0,61.25,18V11.2A2,2,0,0,0,59,8.95"/>
+           <path name="logo-u" class="cls-2 logo-u" id="st12" d="M65.83,20.26A2,2,0,0,1,63.56,18V8.93h1.15v8.74a1.28,1.28,0,0,0,1.4,1.43h6.2a1.25,1.25,0,0,0,1.41-1.36V8.95h1.16v9a2.05,2.05,0,0,1-2.35,2.27h-6.7Z"/>
+           <path name="logo-a" class="cls-2 logo-a" id="st13" d="M76.72,20.27l1.16-2.43a0.27,0.27,0,0,1,.25-0.15h5.4L83,16.62H78.9a0.27,0.27,0,0,1-.23-0.13,0.27,0.27,0,0,1,0-.26l2.53-5A0.27,0.27,0,0,1,81.44,11h0a0.27,0.27,0,0,1,.24.15l4.44,9.08h1.33L81.89,8.94H80.95L75.43,20.27h1.28Z"/>
+         	<path name="logo-r" class="cls-2 logo-r" id="st14" d="M97.49,14.72a2,2,0,0,0,2.26-2.3V11.22a2,2,0,0,0-2.26-2.28H88.43V20.27h1.14V14.72h4.5l-0.56-1.14H89.57V10.36a0.27,0.27,0,0,1,.27-0.27h7.4a1.22,1.22,0,0,1,1.36,1.35v0.81a1.21,1.21,0,0,1-1.35,1.33H94.84l0.56,1.14h0l2.72,5.55h1.33l-2.73-5.55h0.76Z"/>
+           <path name="logo-e" class="cls-2 logo-e" id="st15" d="M103.49,10.09h9.9V8.94H102.08V20.27h11.31V19.11h-9.9a0.27,0.27,0,0,1-.27-0.27V14.69h10.17V13.57H103.22V10.36a0.27,0.27,0,0,1,.27-0.27"/>
+         </g>
+       	</svg>
+       </div>
+    </div>
+    <!--/loading-->
 
-    <div class="sticky clearfix">
-        <!--logo-->
-        <div class="wrap-logo-icon">
-            <img src="images/logo.svg" height="68" class="logo svg" alt="">
-            <div class="opem-main-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+    <div class="header-welcome-home bg-inline">
+
+        <div class="sticky clearfix">
+            <!--logo-->
+            <div class="wrap-logo-icon">
+                <img src="images/logo.svg" height="68" class="logo svg" alt="">
+                <div class="opem-main-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div><!--/logo-->
-        <!--menu-->
-        <div class="menu-wrapper">
-            <div class="menu-inner-wrapper">
-                <div class="menu-inner">
-                    <div class="scroll">
-                        <div class="col col-01">
-                            <div class="text-box">
-                                <h3 class="ajax-popup"><a href="#" data-id="1" data-slug="ajax-about.html">About us</a>
+            <!--/logo-->
+            <!--menu-->
+            <div class="menu-wrapper">
+                <div class="menu-inner-wrapper">
+                    <div class="menu-inner">
+                        <div class="scroll">
+                            <div class="col col-01">
+                                <div class="text-box">
+                                    <h3 class="ajax-popup"><a href="#" data-id="1" data-slug="ajax-about.html">About us</a>
                                 </h3>
-                                <p>Get to know the culture that allowed us to carry out our mission through an
-                                    incredible journey.</p>
-                            </div>
-                            <div class="text-box bottom">
-                                <h3><a href="#" class="nav-client">Who we work with</a></h3>
-                                <p>We measure our success by the sucess of our clients in a variety of industries.</p>
-                            </div>
-                        </div>
-                        <div class="col col-02">
-                            <div class="logo-company">
-                                <h3><a href="#" class="outcompany">Our companies</a></h3>
-                                <div class="show-mobile">
-                                    <ul class="row-logo-1">
-                                        <li><a href="#"><img src="images/logo/square_event.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo/bizeyes.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo/gamma.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo/dsquare.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo/delta.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo/reach.svg" alt=""></a></li>
-                                    </ul>
-                                    <ul class="row-logo-2">
-                                        <li><a href="#"><img src="images/logo/skynet.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo-08.png" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo-09.png" alt=""></a></li>
-                                    </ul>
-                                    <ul class="row-logo-3">
-                                        <li><a href="#"><img src="images/logo/lune.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo/pie.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo/ao.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo-13.png" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo-14.png" alt=""></a></li>
-                                        <li><a href="#"><img src="images/logo-15.png" alt=""></a></li>
-                                    </ul>
+                                    <p>Get to know the culture that allowed us to carry out our mission through an incredible journey.</p>
+                                </div>
+                                <div class="text-box bottom">
+                                    <h3><a href="#" class="nav-client">Who we work with</a></h3>
+                                    <p>We measure our success by the sucess of our clients in a variety of industries.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col col-03">
-                            <div class="text-box">
-                                <h3><a href="#" class="nav-talks">What are our talks</a></h3>
-                                <p>Catch up the latest news about our business, people and culture, what’s going on in
-                                    the communication world and trends to watch out for. Stay tuned.</p>
+                            <div class="col col-02">
+                                <div class="logo-company">
+                                    <h3><a href="#" class="outcompany">Our companies</a></h3>
+                                    <div class="show-mobile">
+                                        <ul class="row-logo-1">
+                                            <li>
+                                                <a href="#"><img src="images/logo/square_event.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo/bizeyes.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo/gamma.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo/dsquare.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo/delta.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo/reach.svg" alt=""></a>
+                                            </li>
+                                        </ul>
+                                        <ul class="row-logo-2">
+                                            <li>
+                                                <a href="#"><img src="images/logo/skynet.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo-08.png" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo-09.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                        <ul class="row-logo-3">
+                                            <li>
+                                                <a href="#"><img src="images/logo/lune.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo/pie.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo/ao.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo-13.png" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo-14.png" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/logo-15.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="text-box  bottom">
-                                <h3 class="nobor"><a href="#" class="nav-career">Be one of us</a></h3>
-                                <p>We don’t look for candidate, we look for companions who strive for expertise
-                                    advancement and career development with us. Come and impress us!</p>
+                            <div class="col col-03">
+                                <div class="text-box">
+                                    <h3><a href="#" class="nav-talks">What are our talks</a></h3>
+                                    <p>Catch up the latest news about our business, people and culture, what’s going on in the communication world and trends to watch out for. Stay tuned.</p>
+                                </div>
+                                <div class="text-box  bottom">
+                                    <h3 class="nobor"><a href="#" class="nav-career">Be one of us</a></h3>
+                                    <p>We don’t look for candidate, we look for companions who strive for expertise advancement and career development with us. Come and impress us!</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="contact-box">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="text">
-                                    <h3>Contact us</h3>
-                                    <p>For general inquiries, please contact: <br/>info@squaregroup.com.vn</p>
+                    <div class="contact-box">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="text">
+                                        <h3>Contact us</h3>
+                                        <p>For general inquiries, please contact: <br/>info@squaregroup.com.vn</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="text">
-                                    <h4>NGUYEN THI PHUONG TRANG (Ms.)</h4>
-                                    <p>
-                                        Business Development Director <br/>
-                                        <strong>(+84) 918 206 081</strong> <br/>
-                                        trang.nguyen@squaregroup.com.vn
-                                    </p>
+                                <div class="col-md-4">
+                                    <div class="text">
+                                        <h4>NGUYEN THI PHUONG TRANG (Ms.)</h4>
+                                        <p>
+                                            Business Development Director <br/>
+                                            <strong>(+84) 918 206 081</strong> <br/> trang.nguyen@squaregroup.com.vn
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="text">
-                                    <h4>VO NGUYEN DANG TRIEU (Mr.)</h4>
-                                    <p>
-                                        Investor Relations Director <br/>
-                                        <strong>(+84) 909 299 799</strong> <br/>
-                                        trieu.vo@squaregroup.com.vn
-                                    </p>
+                                <div class="col-md-4">
+                                    <div class="text">
+                                        <h4>VO NGUYEN DANG TRIEU (Mr.)</h4>
+                                        <p>
+                                            Investor Relations Director <br/>
+                                            <strong>(+84) 909 299 799</strong> <br/> trieu.vo@squaregroup.com.vn
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><!--/menu-->
+            <!--/menu-->
 
-    </div>
+        </div>
 
-    <div class="intro">
-        <video class="intro-parallax-bg" autoplay loop muted poster="images/home/home-video.jpg">
-            <source src="images/home/home-video.mp4" type="video/mp4">
+        <div class="intro">
+            <video class="intro-parallax-bg" autoplay loop muted poster="images/home/home-video.jpg">
+            <source src="images/home/home-video1.mp4" type="video/mp4">
         </video>
-        <div class="video-overlay"></div>
-    </div>
-
-    <div class="table-display-home">
-        <div class="center-valign fit-height">
-            <div class="welcome-text">
-                <p>Always being the</p>
-                <h2>TRUSTED PARTNER <br/><span>of Client &amp; Society</span></h2>
-                <div class="ajax-popup"><a data-id="1" data-slug="ajax-about.html" class="btn">About us</a></div>
-            </div>
+            <div class="video-overlay"></div>
         </div>
-    </div>
-    <a href="#" class="scrolldown"></a>
 
-</div>
-
-
-<section class="second-box fade-box">
-    <div class="wording-box">
-        <div class="ver-line fade-in row-01"></div>
-        <ul>
-            <li class="fade-in row-02">
-                <span>We grow</span>
-                <h3><strong>trusted culture</strong></h3>
-            </li>
-            <li class="fade-in row-03">
-                <span>within our business with</span>
-                <h3><strong>trustworthy people</strong></h3>
-            </li>
-            <li class="fade-in row-04">
-                <span>to create</span>
-                <h3><strong>trustworthy service quality</strong></h3>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<section class="squares-box-wrap full-grid">
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-md-4">
-                <img src="images/upload/square1.jpg" class="hideload" alt="">
-                <div class="box-square bg-inline fade-in col-01"
-                     style="background-image: url(images/upload/square1.jpg)">
-                    <div class="logo-square"><img src="images/square-com.png" alt=""></div>
-                    <div class="content">
-                        <h2>Communications</h2>
-                        <p>Basing on the constantly increasing of creativity and professionalism to bring effective
-                            communication solutions to Clients.</p>
-                        <div class="explore hidden-lg">EXPLORE</div>
-                    </div>
-                    <div class="logo-box-hidden box-1">
-                        <ul class="row-logo-1">
-                            <li><a href="#"><img src="images/logo/square_event.svg" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo/bizeyes.svg" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo/gamma.svg" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo/dsquare.svg" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo/delta.svg" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo/reach.svg" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <img src="images/upload/square2.jpg" class="hideload" alt="">
-                <div class="box-square bg-inline fade-in col-02"
-                     style="background-image: url(images/upload/square2.jpg)">
-                    <div class="logo-square"><img src="images/square-digital.png" alt=""></div>
-                    <div class="content">
-                        <h2>Digital & ICT</h2>
-                        <p>Enhance marketing performance by effective engagement between brands & consumers and
-                            aggressively & productively connect the right target consumers with relevant on-demant
-                            contents.</p>
-                        <div class="explore hidden-lg">EXPLORE</div>
-                    </div>
-                    <div class="logo-box-hidden box-2">
-                        <ul class="row-logo-2">
-                            <li><a href="#"><img src="images/logo/skynet.svg" alt=""></a></li>
-                            <li>
-                                <div class="our-products">Our Products</div>
-                            </li>
-                            <li><a href="#"><img src="images/logo-08.png" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo-09.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <img src="images/upload/square3.jpg" class="hideload" alt="">
-                <div class="box-square bg-inline fade-in col-03"
-                     style="background-image: url(images/upload/square3.jpg)">
-                    <div class="logo-square"><img src="images/square-enter.png" alt=""></div>
-                    <div class="content">
-                        <h2>Entertainment</h2>
-                        <p>Basing on behind regard for multi-demandsional connection between Vietnam and The World, we
-                            aim to convey cultural values of humanities to each individual.</p>
-                        <div class="explore hidden-lg">EXPLORE</div>
-                    </div>
-                    <div class="logo-box-hidden box-3">
-                        <ul class="row-logo-3">
-                            <li><a href="#"><img src="images/logo/lune.svg" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo/pie.svg" alt=""></a></li>
-                            <li class="breakline">
-                                <div class="our-products">Our Products</div>
-                            </li>
-                            <li><a href="#"><img src="images/logo/ao.svg" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo-13.png" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo-14.png" alt=""></a></li>
-                            <li><a href="#"><img src="images/logo-15.png" alt=""></a></li>
-                        </ul>
-                    </div>
+        <div class="table-display-home">
+            <div class="center-valign fit-height">
+                <div class="welcome-text">
+                    <p>Always being the</p>
+                    <h2>TRUSTED PARTNER <br/><span>of Client &amp; Society</span></h2>
+                    <div class="ajax-popup"><a data-id="1" data-slug="ajax-about.html" class="btn">About us</a></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <a href="#" class="scrolldown"></a>
 
-<section class="whowork-box block" id="whowork-box">
-    <h2 class="title-box">WHO WE WORK WITH?</h2>
-    <div class="desc">We measure our success by the success of our clients in variety of industries.</div>
-    <div class="box-center">
-        <div class="serve">
-            <span><strong>We</strong>serve</span>
-            <div class="number">
-                <strong class="count">150</strong>
-                clients
+    </div>
+
+
+    <section class="second-box fade-box">
+        <div class="wording-box">
+            <div class="ver-line fade-in row-01"></div>
+            <ul>
+                <li class="fade-in row-02">
+                    <span>We grow</span>
+                    <h3><strong>trusted culture</strong></h3>
+                </li>
+                <li class="fade-in row-03">
+                    <span>within our business with</span>
+                    <h3><strong>trustworthy people</strong></h3>
+                </li>
+                <li class="fade-in row-04">
+                    <span>to create</span>
+                    <h3><strong>trustworthy service quality</strong></h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="squares-box-wrap full-grid">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <img src="images/upload/square1-low.jpg" class="hideload" alt="">
+                    <div class="box-square bg-inline fade-in col-01" style="background-image: url(images/upload/square1.jpg)">
+                        <div class="logo-square"><img src="images/square-com.png" alt=""></div>
+                        <div class="content">
+                            <h2>Communications</h2>
+                            <p>Basing on the constantly increasing of creativity and professionalism to bring effective communication solutions to Clients.</p>
+                            <div class="explore hidden-lg">EXPLORE</div>
+                        </div>
+                        <div class="logo-box-hidden box-1">
+                            <ul class="row-logo-1">
+                                <li>
+                                    <a href="#"><img src="images/logo/square_event.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo/bizeyes.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo/gamma.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo/dsquare.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo/delta.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo/reach.svg" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="images/upload/square2-low.jpg" class="hideload" alt="">
+                    <div class="box-square bg-inline fade-in col-02" style="background-image: url(images/upload/square2.jpg)">
+                        <div class="logo-square"><img src="images/square-digital.png" alt=""></div>
+                        <div class="content">
+                            <h2>Digital & ICT</h2>
+                            <p>Enhance marketing performance by effective engagement between brands & consumers and aggressively & productively connect the right target consumers with relevant on-demant contents.
+                            </p>
+                            <div class="explore hidden-lg">EXPLORE</div>
+                        </div>
+                        <div class="logo-box-hidden box-2">
+                            <ul class="row-logo-2">
+                                <li>
+                                    <a href="#"><img src="images/logo/skynet.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <div class="our-products">Our Products</div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo-08.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo-09.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="images/upload/square3-low.jpg" class="hideload" alt="">
+                    <div class="box-square bg-inline fade-in col-03" style="background-image: url(images/upload/square3.jpg)">
+                        <div class="logo-square"><img src="images/square-enter.png" alt=""></div>
+                        <div class="content">
+                            <h2>Entertainment</h2>
+                            <p>Basing on behind regard for multi-demandsional connection between Vietnam and The World, we aim to convey cultural values of humanities to each individual.</p>
+                            <div class="explore hidden-lg">EXPLORE</div>
+                        </div>
+                        <div class="logo-box-hidden box-3">
+                            <ul class="row-logo-3">
+                                <li>
+                                    <a href="#"><img src="images/logo/lune.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo/pie.svg" alt=""></a>
+                                </li>
+                                <li class="breakline">
+                                    <div class="our-products">Our Products</div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo/ao.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo-13.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo-14.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo-15.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="projects">
-            <div class="text">With</div>
-            <div class="number">
-                <strong class="count">700</strong>
-                projects
+    </section>
+
+    <section class="whowork-box block" id="whowork-box">
+        <h2 class="title-box">WHO WE WORK WITH?</h2>
+        <div class="desc">We measure our success by the success of our clients in variety of industries.</div>
+        <div class="box-center">
+            <div class="serve">
+                <span><strong>We</strong>serve</span>
+                <div class="number">
+                    <strong class="count">150</strong> clients
+                </div>
+            </div>
+            <div class="projects">
+                <div class="text">With</div>
+                <div class="number">
+                    <strong class="count">700</strong> projects
+                </div>
+            </div>
+            <div class="info">
+                <p>across</p>
+                <h3>Multiple</h3>
+                <h4>categories</h4>
             </div>
         </div>
-        <div class="info">
-            <p>across</p>
-            <h3>Multiple</h3>
-            <h4>categories</h4>
-        </div>
-    </div>
-    <div class="pattent"></div>
-</section>
+        <div class="pattent"></div>
+    </section>
 
-<section class="news-box block animatedParent animateOnce">
-    <div class="animated fadeInDownShort">
-        <h2 class="title-box">WHAT ARE OUR TALKS?</h2>
-        <div class="desc">Catch up the latest news about our business, people and culture, what’s going on in the
-            communication world and trends to watch out for. Stay tuned.
-        </div>
-
-        <div class="box-news grid" id="box-news">
-
-            <!-- <div class="grid-item grid-item--width2">
+    <section class="news-box block animatedParent animateOnce">
+        <div class="animated fadeInDownShort">
+            <h2 class="title-box">WHAT ARE OUR TALKS?</h2>
+            <div class="desc">Catch up the latest news about our business, people and culture, what’s going on in the communication world and trends to watch out for. Stay tuned.
+            </div>
+            <div class="box-news grid" id="box-news">
+                <!-- <div class="grid-item grid-item--width2">
                 <a data-id="120" data-slug="ajax-news.html">
                     <img src="images/upload/thumb1.jpg" alt="">
                     <h3>Lune production introduces a o new version: Teh Dar at Saigon Opera House</h3>
@@ -346,117 +428,117 @@
                 <h3><a href="#">Lang Toi - Performs live at Hanoi opera house </a></h3>
             </div>
             <div class="pager-wrap"><a class="btn btn-more">See more</a></div> -->
-
-        </div>
-        <div class="join-box">
-            <h2>Join us!</h2>
-            <div class="box-content">
-                <ul>
-                    <li>
-                        <h3><a href="http://www.nguoidauvuong.com/" target="_blank"><i></i><strong>Blog
-                            Nguoidauvuong</strong></a></h3>
-                        <h4><a href="#">[Squarers' travel Journals] Đừng nên đến Lào, sẽ bị yêu đấy!</a></h4>
-                    </li>
-                    <li class="line"><p></p></li>
-                    <li>
-                        <h3><a href="https://www.facebook.com/groups/nguoidauvuong/" target="_blank"><i
-                                class="fb"></i><strong>Fb Nguoidauvuong</strong></a></h3>
-                        <h4><a href="#">Niềm vui cuối tuần của Người Đầu Vuông đó chính là len lén đột nhập vào facebook
-                            ... 500 anh em nhà Square Group.</a></h4>
-                    </li>
-                </ul>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="career-box block animatedParent animateOnce" data-sequence="200" data-appear-top-offset="-300">
-    <h2 class="title-box">BE ONE OF US</h2>
-    <div class="desc">We don’t look for candidate, we look for companions who strive for expertise advancement and
-        career development. Come and impress us!
-    </div>
-    <div class="career-wrapper bg-inline" style="background-image: url(images/upload/banner2.jpg)">
-        <div class="col col-01">
-            <h2 class="animated fadeInDownShort" data-id="1">CAREER</h2>
-            <h3 class="animated fadeInUpShort" data-id="1">OPPORTUNITIES</h3>
-
-            <div class="box-content hidexpand animated fadeIn" data-id="4">
-                <ul>
-                    <li><a href="#">Executive Creative Director</a></li>
-                    <li><a href="#">Senior Planning Director</a></li>
-                    <li><a href="#">Account Director</a></li>
-                    <li><a href="#">Art Director</a></li>
-                    <li><a href="#">Senior Performance Executive</a></li>
-                </ul>
-                <button class="btn btn-join-career">Join Us</button>
-            </div>
-
-            <div class="wrap-hide clearfix">
-                <div class="col-left">
-                    <div class="tab-list">
-                        <div class="tab-wrap">
-                            <h3 class="dd-filter"><span>Square</span></h3>
-                            <ul class="tabs">
-                                <li class="tab-link current" data-tab="tab-1"><span>Square</span></li>
-                                <li class="tab-link" data-tab="tab-2"><span>Holdings  </span></li>
-                                <li class="tab-link" data-tab="tab-3"><span>Delta  </span></li>
-                                <li class="tab-link" data-tab="tab-4"><span>Reach  </span></li>
-                                <li class="tab-link" data-tab="tab-5"><span>Bizeyes  </span></li>
-                                <li class="tab-link" data-tab="tab-6"><span>Lune  </span></li>
-                                <li class="tab-link" data-tab="tab-7"><span>Dsquare  </span></li>
-                                <li class="tab-link" data-tab="tab-8"><span>Skynet  </span></li>
-                                <li class="tab-link" data-tab="tab-9"><span>Gamma  </span></li>
-                                <li class="tab-link" data-tab="tab-10"><span>Pie</span></li>
-                            </ul>
-                        </div>
-                        <div id="tab-1" class="tab-content current">
-                            <ul>
-                                <li><a href="#">Executive Creative Director</a></li>
-                                <li><a href="#">Planning Director</a></li>
-                                <li><a href="#">Account Director</a></li>
-                                <li><a href="#">Art Director</a></li>
-                                <li><a href="#">Content Executive</a></li>
-                                <li><a href="#">Account Executive</a></li>
-                                <li><a href="#">Intern Web Designer</a></li>
-                                <li><a href="#">Front End Developer</a></li>
-                                <li><a href="#">SEO Supervisor</a></li>
-                            </ul>
-                        </div>
-                        <div id="tab-2" class="tab-content">
-                            <ul>
-                                <li><a href="#">Creative Director</a></li>
-                                <li><a href="#">Planning Director</a></li>
-
-                                <li><a href="#">Content Executive</a></li>
-                                <li><a href="#">Account Executive</a></li>
-                                <li><a href="#">Intern Web Designer</a></li>
-                                <li><a href="#">Front End Developer</a></li>
-                                <li><a href="#">SEO Supervisor</a></li>
-                            </ul>
-                        </div>
-                        <div id="tab-3" class="tab-content">
-                            <ul>
-                                <li><a href="#">Creative Director</a></li>
-                                <li><a href="#">Planning Director</a></li>
-                                <li><a href="#">Account Director</a></li>
-                                <li><a href="#">Art Director</a></li>
-                                <li><a href="#">Content Executive</a></li>
-                                <li><a href="#">Content Executive</a></li>
-                                <li><a href="#">Account Executive</a></li>
-                                <li><a href="#">Intern Web Designer</a></li>
-                                <li><a href="#">Front End Developer</a></li>
-                                <li><a href="#">SEO Supervisor</a></li>
-                            </ul>
-                        </div>
-                        <button class="btn-back">Back</button>
-                    </div>
-                </div>
+            <div class="join-box">
+                <h2>Join us!</h2>
                 <div class="box-content">
-                    <form action="">
-                        <div class="row-txt"><input type="text" placeholder="Email address"></div>
-                        <div class="row-txt"><input type="text" placeholder="Full name"></div>
-                        <div class="row-txt custom-select">
-                            <select name="#" id="">
+                    <ul>
+                        <li>
+                            <h3><a href="http://www.nguoidauvuong.com/" target="_blank"><i></i><strong>Blog
+                            Nguoidauvuong</strong></a></h3>
+                            <h4><a href="#">[Squarers' travel Journals] Đừng nên đến Lào, sẽ bị yêu đấy!</a></h4>
+                        </li>
+                        <li class="line">
+                            <p></p>
+                        </li>
+                        <li>
+                            <h3><a href="https://www.facebook.com/groups/nguoidauvuong/" target="_blank"><i
+                                class="fb"></i><strong>Fb Nguoidauvuong</strong></a></h3>
+                            <h4><a href="#">Niềm vui cuối tuần của Người Đầu Vuông đó chính là len lén đột nhập vào facebook
+                            ... 500 anh em nhà Square Group.</a></h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="career-box block animatedParent animateOnce" data-sequence="200" data-appear-top-offset="-300">
+        <h2 class="title-box">BE ONE OF US</h2>
+        <div class="desc">We don’t look for candidate, we look for companions who strive for expertise advancement and career development. Come and impress us!
+        </div>
+        <div class="career-wrapper bg-inline" style="background-image: url(images/upload/banner2.jpg)">
+            <div class="col col-01">
+                <h2 class="animated fadeInDownShort" data-id="1">CAREER</h2>
+                <h3 class="animated fadeInUpShort" data-id="1">OPPORTUNITIES</h3>
+
+                <div class="box-content hidexpand animated fadeIn" data-id="4">
+                    <ul>
+                        <li><a href="#">Executive Creative Director</a></li>
+                        <li><a href="#">Senior Planning Director</a></li>
+                        <li><a href="#">Account Director</a></li>
+                        <li><a href="#">Art Director</a></li>
+                        <li><a href="#">Senior Performance Executive</a></li>
+                    </ul>
+                    <button class="btn btn-join-career">Join Us</button>
+                </div>
+
+                <div class="wrap-hide clearfix">
+                    <div class="col-left">
+                        <div class="tab-list">
+                            <div class="tab-wrap">
+                                <h3 class="dd-filter"><span>Square</span></h3>
+                                <ul class="tabs">
+                                    <li class="tab-link current" data-tab="tab-1"><span>Square</span></li>
+                                    <li class="tab-link" data-tab="tab-2"><span>Holdings  </span></li>
+                                    <li class="tab-link" data-tab="tab-3"><span>Delta  </span></li>
+                                    <li class="tab-link" data-tab="tab-4"><span>Reach  </span></li>
+                                    <li class="tab-link" data-tab="tab-5"><span>Bizeyes  </span></li>
+                                    <li class="tab-link" data-tab="tab-6"><span>Lune  </span></li>
+                                    <li class="tab-link" data-tab="tab-7"><span>Dsquare  </span></li>
+                                    <li class="tab-link" data-tab="tab-8"><span>Skynet  </span></li>
+                                    <li class="tab-link" data-tab="tab-9"><span>Gamma  </span></li>
+                                    <li class="tab-link" data-tab="tab-10"><span>Pie</span></li>
+                                </ul>
+                            </div>
+                            <div id="tab-1" class="tab-content current">
+                                <ul>
+                                    <li><a href="#">Executive Creative Director</a></li>
+                                    <li><a href="#">Planning Director</a></li>
+                                    <li><a href="#">Account Director</a></li>
+                                    <li><a href="#">Art Director</a></li>
+                                    <li><a href="#">Content Executive</a></li>
+                                    <li><a href="#">Account Executive</a></li>
+                                    <li><a href="#">Intern Web Designer</a></li>
+                                    <li><a href="#">Front End Developer</a></li>
+                                    <li><a href="#">SEO Supervisor</a></li>
+                                </ul>
+                            </div>
+                            <div id="tab-2" class="tab-content">
+                                <ul>
+                                    <li><a href="#">Creative Director</a></li>
+                                    <li><a href="#">Planning Director</a></li>
+
+                                    <li><a href="#">Content Executive</a></li>
+                                    <li><a href="#">Account Executive</a></li>
+                                    <li><a href="#">Intern Web Designer</a></li>
+                                    <li><a href="#">Front End Developer</a></li>
+                                    <li><a href="#">SEO Supervisor</a></li>
+                                </ul>
+                            </div>
+                            <div id="tab-3" class="tab-content">
+                                <ul>
+                                    <li><a href="#">Creative Director</a></li>
+                                    <li><a href="#">Planning Director</a></li>
+                                    <li><a href="#">Account Director</a></li>
+                                    <li><a href="#">Art Director</a></li>
+                                    <li><a href="#">Content Executive</a></li>
+                                    <li><a href="#">Content Executive</a></li>
+                                    <li><a href="#">Account Executive</a></li>
+                                    <li><a href="#">Intern Web Designer</a></li>
+                                    <li><a href="#">Front End Developer</a></li>
+                                    <li><a href="#">SEO Supervisor</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn-back">Back</button>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <form action="">
+                            <div class="row-txt"><input type="text" placeholder="Email address"></div>
+                            <div class="row-txt"><input type="text" placeholder="Full name"></div>
+                            <div class="row-txt custom-select">
+                                <select name="#" id="">
                                 <option value="#">Job</option>
                                 <option value="#">2Lorem ipsum dolor</option>
                                 <option value="#">3Lorem ipsum dolor</option>
@@ -464,7 +546,31 @@
                                 <option value="#">Lorem ipsum dolor</option>
                                 <option value="#">Lorem ipsum dolor</option>
                             </select>
-                        </div>
+                            </div>
+                            <div class="row-txt"><input type="text" placeholder="Message"></div>
+                            <div class="row-submit"><input type="submit" class="btn" value="Send"></div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col col-02">
+                <h2 class="animated fadeInDownShort" data-id="2">ESOP</h2>
+                <h3 class="animated fadeInUpShort" data-id="2">PLAN</h3>
+
+                <div class="box-content animated fadeIn" data-id="5">
+                    At Square Group, we treasure the affiliation and commitment coming from each individual employee. An ESOP (Employee Stock Ownership Program) plan empowers the group’s workforce with stock ownership at their own company. Through our ESOP, we aim to bring
+                    out the spirit of union and thriving partnership between employees and companies.
+                </div>
+            </div>
+            <div class="col col-03">
+                <h2 class="animated fadeInDownShort" data-id="3">SEND US</h2>
+                <h3 class="animated fadeInUpShort" data-id="3">A MESSAGE</h3>
+
+                <div class="box-content animated fadeIn" data-id="6">
+                    <form action="">
+                        <div class="row-txt"><input type="text" placeholder="Email address"></div>
+                        <div class="row-txt"><input type="text" placeholder="Full name"></div>
                         <div class="row-txt"><input type="text" placeholder="Message"></div>
                         <div class="row-submit"><input type="submit" class="btn" value="Send"></div>
                     </form>
@@ -472,175 +578,146 @@
             </div>
 
         </div>
-        <div class="col col-02">
-            <h2 class="animated fadeInDownShort" data-id="2">ESOP</h2>
-            <h3 class="animated fadeInUpShort" data-id="2">PLAN</h3>
+    </section>
 
-            <div class="box-content animated fadeIn" data-id="5">
-                At Square Group, we treasure the affiliation and commitment coming from each individual employee. An
-                ESOP (Employee Stock Ownership Program) plan empowers the group’s workforce with stock ownership at
-                their own company. Through our ESOP, we aim to bring out the spirit of union and thriving partnership
-                between employees and companies.
-            </div>
-        </div>
-        <div class="col col-03">
-            <h2 class="animated fadeInDownShort" data-id="3">SEND US</h2>
-            <h3 class="animated fadeInUpShort" data-id="3">A MESSAGE</h3>
-
-            <div class="box-content animated fadeIn" data-id="6">
-                <form action="">
-                    <div class="row-txt"><input type="text" placeholder="Email address"></div>
-                    <div class="row-txt"><input type="text" placeholder="Full name"></div>
-                    <div class="row-txt"><input type="text" placeholder="Message"></div>
-                    <div class="row-submit"><input type="submit" class="btn" value="Send"></div>
-                </form>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="lettalk-box block animatedParent animateOnce" data-appear-top-offset="-300">
-    <h2 class="title-box">LET'S TALK</h2>
-    <div class="desc">Drop us a line, give us a buzz or come over for a chat!</div>
-    <div class="contact-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 nobor animated fadeIn">
-                    <div class="text">
-                        <h4>NGUYEN THI PHUONG TRANG (Ms.)</h4>
-                        <p>
-                            Business Development Director <br/>
-                            <strong>(+84) 918 206 081</strong> <br/>
-                            trang.nguyen@squaregroup.com.vn
-                        </p>
+    <section class="lettalk-box block animatedParent animateOnce" data-appear-top-offset="-300">
+        <h2 class="title-box">LET'S TALK</h2>
+        <div class="desc">Drop us a line, give us a buzz or come over for a chat!</div>
+        <div class="contact-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 nobor animated fadeIn">
+                        <div class="text">
+                            <h4>NGUYEN THI PHUONG TRANG (Ms.)</h4>
+                            <p>
+                                Business Development Director <br/>
+                                <strong>(+84) 918 206 081</strong> <br/> trang.nguyen@squaregroup.com.vn
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-6 animated fadeIn">
-                    <div class="text">
-                        <h4>VO NGUYEN DANG TRIEU (Mr.)</h4>
-                        <p>
-                            Investor Relations Director <br/>
-                            <strong>(+84) 909 299 799</strong> <br/>
-                            trieu.vo@squaregroup.com.vn
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="align-center">For general inquiries, please contact: info@squaregroup.com.vn</div>
-        </div>
-    </div>
-</section>
-
-<section class="address-box bg-inline animatedParent animateOnce" data-appear-top-offset="-300"
-         style="background-image: url(images/map-bg.jpg)">
-    <h2 class="title-head">Ho CHi Minh offices</h2>
-    <ul class="animated fadeIn">
-        <li class="hoadao">
-            <h3>OFFICE 1 - Biz-Eyes | DSquare | PiE Entertainment</h3>
-            <p>54-56 Hoa Dao, Ward 2, Phu Nhuan District, HCMC</p>
-        </li>
-        <li class="truongquocdung">
-            <h3>OFFICE 2 - Square | Gamma | Reach</h3>
-            <p>55 Truong Quoc Dung, Ward 10, Phu Nhuan District, HCMC</p>
-        </li>
-        <li class="thichquangduc">
-            <h3>OFFICE 3 - Delta</h3>
-            <p>3A Thich Quang Duc, Ward 3, Phu Nhuan District, HCMC</p>
-        </li>
-        <li class="nguyentieula">
-            <h3>OFFICE 4 - Skynet</h3>
-            <p>237/29 Nguyen Tieu La, Ward 8, District 10, HCMC</p>
-        </li>
-        <li class="dongkhoi">
-            <h3>OFFICE 5 - Lune Production</h3>
-            <p>151/13 Dong Khoi, Ben Nghe Ward, District 1, HCMC</p>
-        </li>
-        <li class="catlai">
-            <h3>office 6 - Gamma Factory</h3>
-            <p>No. 1, Sector 2, Cat Lai Industrial Zone, Street C, Thanh My Loi Ward, District 2, HCMC</p>
-        </li>
-
-    </ul>
-
-    <h2 class="title-head">Ha Noi offices</h2>
-    <ul class="animated fadeIn">
-        <li>
-            <h3>OFFICE 7 - Delta</h3>
-            <p>32B5 Lane 6 Kim Dong, Giap Bat, Hoang Mai, Ha Noi</p>
-        </li>
-        <li>
-            <h3>office 8 - Lune Production</h3>
-            <p>No. 1602 Kim Khi Thang Long Apartment, 1 Luong Yen, Hai Ba Trung, Ha Noi</p>
-        </li>
-    </ul>
-
-</section>
-
-<div id="content_detail">
-    <div class="dialog">
-        <a href="javascript:;" class="close-btn"></a>
-        <div class="content">
-            <!--template-->
-            <div class="header-welcome bg-inline header-news" data-json="news-bg">
-                <div class="title-news">
-                    <h1 class="title" data-json="news-title"></h1>
-                </div>
-            </div>
-            <section class="detail-news-box second-box">
-                <div class="single-post">
-                    <div class="meta-news">
-                        <ul>
-                            <li><span data-json="news-date"></span></li>
-                            <li><a href="#"><i class="icon fb"></i>Chia sẻ</a></li>
-                            <li><a href="#"><i class="icon mail"></i>Gửi email</a></li>
-                            <li><a href="#"><i class="icon link"></i>Link</a></li>
-                        </ul>
-                    </div>
-                    <div class="content-editor">
-                        <!--lead-->
-                        <div data-json="news-lead" class="desc"></div>
-                        <!--content-->
-                        <div data-json="news-content" class="news-content"></div>
-                    </div>
-                    <div class="relate-block" style="display: none;">
-                        <h3 class="title-block">Other news</h3>
-                        <div class="box-news grid slide-other">
-                            <div class="grid-item">
-                                <img src="images/upload/thumb2.jpg" alt="">
-                                <h3><a data-id="120" data-slug="news.html">Lang Toi - Performs live at Hanoi opera
-                                    house </a></h3>
-                            </div>
-                            <div class="grid-item">
-                                <img src="images/upload/thumb1.jpg" alt="">
-                                <h3><a href="#">Skynet presented an automobile e-commerce platform</a></h3>
-                            </div>
-                            <div class="grid-item">
-                                <img src="images/upload/thumb5.jpg" alt="">
-                                <h3><a href="#">10 years of riding the wind</a></h3>
-                            </div>
-                            <div class="grid-item">
-                                <img src="images/upload/thumb4.jpg" alt="">
-                                <h3><a href="#">Skynet presented an automobile e-commerce platform</a></h3>
-                            </div>
-                            <div class="grid-item">
-                                <img src="images/upload/thumb5.jpg" alt="">
-                                <h3><a href="#">10 years of riding the wind</a></h3>
-                            </div>
-                            <div class="grid-item">
-                                <img src="images/upload/thumb6.jpg" alt="">
-                                <h3><a href="#">Square group - strategic partner for Vietnam Young Lions 2016</a></h3>
-                            </div>
+                    <div class="col-sm-6 animated fadeIn">
+                        <div class="text">
+                            <h4>VO NGUYEN DANG TRIEU (Mr.)</h4>
+                            <p>
+                                Investor Relations Director <br/>
+                                <strong>(+84) 909 299 799</strong> <br/> trieu.vo@squaregroup.com.vn
+                            </p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!--/template-->
+                <div class="align-center">For general inquiries, please contact: info@squaregroup.com.vn</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="address-box bg-inline animatedParent animateOnce" data-appear-top-offset="-300" style="background-image: url(images/map-bg.jpg)">
+        <h2 class="title-head">Ho CHi Minh offices</h2>
+        <ul class="animated fadeIn">
+            <li class="hoadao">
+                <h3>OFFICE 1 - Biz-Eyes | DSquare | PiE Entertainment</h3>
+                <p>54-56 Hoa Dao, Ward 2, Phu Nhuan District, HCMC</p>
+            </li>
+            <li class="truongquocdung">
+                <h3>OFFICE 2 - Square | Gamma | Reach</h3>
+                <p>55 Truong Quoc Dung, Ward 10, Phu Nhuan District, HCMC</p>
+            </li>
+            <li class="thichquangduc">
+                <h3>OFFICE 3 - Delta</h3>
+                <p>3A Thich Quang Duc, Ward 3, Phu Nhuan District, HCMC</p>
+            </li>
+            <li class="nguyentieula">
+                <h3>OFFICE 4 - Skynet</h3>
+                <p>237/29 Nguyen Tieu La, Ward 8, District 10, HCMC</p>
+            </li>
+            <li class="dongkhoi">
+                <h3>OFFICE 5 - Lune Production</h3>
+                <p>151/13 Dong Khoi, Ben Nghe Ward, District 1, HCMC</p>
+            </li>
+            <li class="catlai">
+                <h3>office 6 - Gamma Factory</h3>
+                <p>No. 1, Sector 2, Cat Lai Industrial Zone, Street C, Thanh My Loi Ward, District 2, HCMC</p>
+            </li>
+
+        </ul>
+
+        <h2 class="title-head">Ha Noi offices</h2>
+        <ul class="animated fadeIn">
+            <li>
+                <h3>OFFICE 7 - Delta</h3>
+                <p>32B5 Lane 6 Kim Dong, Giap Bat, Hoang Mai, Ha Noi</p>
+            </li>
+            <li>
+                <h3>office 8 - Lune Production</h3>
+                <p>No. 1602 Kim Khi Thang Long Apartment, 1 Luong Yen, Hai Ba Trung, Ha Noi</p>
+            </li>
+        </ul>
+
+    </section>
+
+    <div id="content_detail">
+        <div class="dialog">
+            <a href="javascript:;" class="close-btn"></a>
+            <div class="content">
+                <!--template-->
+                <div class="header-welcome bg-inline header-news" data-json="news-bg">
+                    <div class="title-news">
+                        <h1 class="title" data-json="news-title"></h1>
+                    </div>
+                </div>
+                <section class="detail-news-box second-box">
+                    <div class="single-post">
+                        <div class="meta-news">
+                            <ul>
+                                <li><span data-json="news-date"></span></li>
+                                <li><a href="#"><i class="icon fb"></i>Chia sẻ</a></li>
+                                <li><a href="#"><i class="icon mail"></i>Gửi email</a></li>
+                                <li><a href="#"><i class="icon link"></i>Link</a></li>
+                            </ul>
+                        </div>
+                        <div class="content-editor">
+                            <!--lead-->
+                            <div data-json="news-lead" class="desc"></div>
+                            <!--content-->
+                            <div data-json="news-content" class="news-content"></div>
+                        </div>
+                        <div class="relate-block" style="display: none;">
+                            <h3 class="title-block">Other news</h3>
+                            <div class="box-news grid slide-other">
+                                <div class="grid-item">
+                                    <img src="images/upload/thumb2.jpg" alt="">
+                                    <h3><a data-id="120" data-slug="news.html">Lang Toi - Performs live at Hanoi opera
+                                    house </a></h3>
+                                </div>
+                                <div class="grid-item">
+                                    <img src="images/upload/thumb1.jpg" alt="">
+                                    <h3><a href="#">Skynet presented an automobile e-commerce platform</a></h3>
+                                </div>
+                                <div class="grid-item">
+                                    <img src="images/upload/thumb5.jpg" alt="">
+                                    <h3><a href="#">10 years of riding the wind</a></h3>
+                                </div>
+                                <div class="grid-item">
+                                    <img src="images/upload/thumb4.jpg" alt="">
+                                    <h3><a href="#">Skynet presented an automobile e-commerce platform</a></h3>
+                                </div>
+                                <div class="grid-item">
+                                    <img src="images/upload/thumb5.jpg" alt="">
+                                    <h3><a href="#">10 years of riding the wind</a></h3>
+                                </div>
+                                <div class="grid-item">
+                                    <img src="images/upload/thumb6.jpg" alt="">
+                                    <h3><a href="#">Square group - strategic partner for Vietnam Young Lions 2016</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/template-->
+            </div>
         </div>
     </div>
-</div>
 
-<!-- <script>
+    <!-- <script>
   var D2 = {
       config: {
           baseUrl: '/js',
@@ -656,18 +733,19 @@
 <script src="js/require.js" data-main="js/main.js"></script> -->
 
 
-<script src="js/jquery-2.2.4.min.js"></script>
-<script src='js/jquery.history.js'></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.timelinr-0.9.6.js"></script>
-<script src='js/clipboard.min.js'></script>
-<script src='js/typed.min.js'></script>
-<script src="js/slick.min.js"></script>
-<script src="js/enscroll.min.js"></script>
-<script src="js/css3-animate-it.js"></script>
-<script src="js/scripts.js"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src='js/jquery.history.js'></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.timelinr-0.9.6.js"></script>
+    <script src='js/clipboard.min.js'></script>
+    <script src='js/typed.min.js'></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/enscroll.min.js"></script>
+    <script src="js/css3-animate-it.js"></script>
+    <script src="js/scripts.js"></script>
 
-<!-- <script type='text/javascript' src='js/all.js'></script> -->
+
+    <!-- <script type='text/javascript' src='js/all.js'></script> -->
 </body>
 
 

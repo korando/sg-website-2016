@@ -12,6 +12,6 @@ gulp.task('javascript', function() {
       //.pipe(jshint())
       //.pipe(jshint.reporter('jshint-stylish'))
       //.pipe(concat('all.js'))
-      //.pipe(gulpif(global.isProd, uglify()))
+      .pipe(gulpif(global.isProd, uglify()))
       .pipe(gulp.dest(config.scripts.dest));
 });

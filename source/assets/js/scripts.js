@@ -367,22 +367,22 @@ $(document).ready(function($) {
 
     //maps switch
     $('.hoadao').click(function functionName() {
-        $('.address-box').css('background-image', 'url(base/images/maps/hoadao.jpg)');
+        $('.address-box').css('background-image', 'url(images/maps/hoadao.jpg)');
     });
     $('.thichquangduc').click(function functionName() {
-        $('.address-box').css('background-image', 'url(base/images/maps/thichquangduc.jpg)');
+        $('.address-box').css('background-image', 'url(images/maps/thichquangduc.jpg)');
     });
     $('.dongkhoi').click(function functionName() {
-        $('.address-box').css('background-image', 'url(base/images/maps/dongkhoi.jpg)');
+        $('.address-box').css('background-image', 'url(images/maps/dongkhoi.jpg)');
     });
     $('.truongquocdung').click(function functionName() {
-        $('.address-box').css('background-image', 'url(base/images/maps/truongquocdung.jpg)');
+        $('.address-box').css('background-image', 'url(images/maps/truongquocdung.jpg)');
     });
     $('.nguyentieula').click(function functionName() {
-        $('.address-box').css('background-image', 'url(base/images/maps/nguyentieula.jpg)');
+        $('.address-box').css('background-image', 'url(images/maps/nguyentieula.jpg)');
     });
     $('.catlai').click(function functionName() {
-        $('.address-box').css('background-image', 'url(base/images/maps/catlai.jpg)');
+        $('.address-box').css('background-image', 'url(images/maps/catlai.jpg)');
     });
 
     $('.ajax-popup').each(function() {
@@ -418,10 +418,28 @@ $(document).ready(function($) {
 
 $(window).load(function() {
     'use strict';
+    //$(".loader").fadeOut("slow");
+    //$(".loader").remove();
+
+    //loading screen
+    var loaded = false;
+    var time = 3000;
+    $(function() {
+        $(window).load(function() {
+           loaded = true;
+        });
+        setTimeout(function() {
+            if(!loaded) {
+                $(".loader").fadeOut("slow");
+            }
+        },time);
+    });
+
+
     $('.hideload').each(function() {
         var imgHeight = $(this).height(),
             imgWidth = $(this).width();
-
+        console.log('imgWidth='+imgWidth+';imgHeight'+imgHeight);
         $('.box-square').css({
             'width': imgWidth,
             'height': imgHeight
